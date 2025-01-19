@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #000000;
+    color: #ffffff;
     line-height: 1.6;
     background-color: #000000;
 }
@@ -45,6 +45,7 @@ nav ul li a {
 .section {
     padding: 50px 20px;
     text-align: center;
+    
 }
 
 .container {
