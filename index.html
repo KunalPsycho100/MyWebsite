@@ -3,85 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunal Joshi | Cybersecurity Portfolio</title>
+    <meta name="description" content="Kunal Joshi - Elite Cybersecurity Specialist, Ethical Hacker, and Security Researcher. Specializing in penetration testing, vulnerability assessment, and security research.">
+    <title>Kunal Joshi | Elite Cybersecurity Specialist</title>
+    <link rel="icon" type="image/x-icon" href="./boot-kali.gif">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <img src="./boot-kali.gif" alt="logo" width="240">
-            <h1>Kunal Joshi</h1>
-            <p>B.Tech Student | Cybersecurity Enthusiast | NSUT</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+<body class="bg-black text-green-500 font-['Share_Tech_Mono'] min-h-screen">
+    <!-- Matrix-style background animation -->
+    <div class="fixed inset-0 bg-black opacity-20 z-0">
+        <div class="absolute inset-0 matrix-background"></div>
+    </div>
+    
+    <header class="py-4 w-full z-50 backdrop-blur-lg bg-black/80 border-b border-green-500/30">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="./boot-kali.gif" alt="logo" class="w-12 sm:w-16 lg:w-20 rounded-full shadow-2xl border-2 border-green-500 hover:border-red-500 transition-all duration-500 hover:rotate-180">
+                    <div class="ml-4">
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold glitch-text">Kunal Joshi</h1>
+                        <p class="text-xs sm:text-sm lg:text-base text-green-400 typewriter">[Ethical Hacker | Security Researcher]</p>
+                    </div>
+                </div>
+
+                <!-- Hamburger Menu Button -->
+                <button id="menu-toggle" class="lg:hidden text-green-400 hover:text-red-500 transition-all duration-300" title="Toggle navigation menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:block">
+                    <ul class="flex gap-8">
+                        <li><a href="#about" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-user-secret mr-2 group-hover:rotate-12 transition-transform"></i>About]</a></li>
+                        <li><a href="#experience" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-briefcase mr-2 group-hover:rotate-12 transition-transform"></i>Experience]</a></li>
+                        <li><a href="#skills" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-terminal mr-2 group-hover:rotate-12 transition-transform"></i>Skills]</a></li>
+                        <li><a href="#projects" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-bug mr-2 group-hover:rotate-12 transition-transform"></i>Projects]</a></li>
+                        <li><a href="#contact" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-network-wired mr-2 group-hover:rotate-12 transition-transform"></i>Contact]</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="lg:hidden hidden">
+                <ul class="flex flex-col items-center gap-6 pt-6">
+                    <li><a href="#about" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-user-secret mr-2 group-hover:rotate-12 transition-transform"></i>About]</a></li>
+                    <li><a href="#experience" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-briefcase mr-2 group-hover:rotate-12 transition-transform"></i>Experience]</a></li>
+                    <li><a href="#skills" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-terminal mr-2 group-hover:rotate-12 transition-transform"></i>Skills]</a></li>
+                    <li><a href="#projects" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-bug mr-2 group-hover:rotate-12 transition-transform"></i>Projects]</a></li>
+                    <li><a href="#contact" class="group text-base text-green-400 hover:text-red-500 transition-all duration-300 flex items-center">[<i class="fas fa-network-wired mr-2 group-hover:rotate-12 transition-transform"></i>Contact]</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm Kunal Joshi, a passionate B.Tech student at Netaji Subhas University of Technology. 
-                With a deep interest in cybersecurity and ethical hacking, I have gained hands-on experience 
-                in penetration testing, vulnerability assessment, and web application security.
-            </p>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Programming Languages: Java, Python, JavaScript, PHP</li>
-                <li>Web Development: HTML, CSS, JavaScript</li>
-                <li>Cybersecurity Tools: Kali Linux, Metasploit, Nmap, Wireshark, Burp Suite</li>
-                <li>Frameworks & Libraries: TensorFlow, NumPy, Keras</li>
-                <li>Database Management: PostgreSQL, MySQL</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3><a href="https://github.com/KunalPsycho100/Two-Players-Chess" target="_blank">Two Player Chess Game</a></h3>
-                    <p>Developed a functional 2-player chess game with classic rules and gameplay mechanics using Python and Pygame.</p>
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center relative overflow-hidden py-5 lg:py-0">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="container mx-auto px-4 max-w-6xl relative">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+                    <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight cyberpunk-glitch">
+                            <span class="text-green-500">&lt;Penetrating</span><br/>
+                            <span class="text-red-500">The Matrix/&gt;</span>
+                        </h1>
+                        <p class="text-base sm:text-lg lg:text-xl text-green-400 mb-8 terminal-text">root@kali:~# Specializing in advanced penetration testing, vulnerability assessment, and security research. Transforming security through ethical hacking.</p>
+                        <div class="flex gap-4 sm:gap-6 justify-center lg:justify-start">
+                            <a href="#projects" class="px-4 sm:px-8 py-2 sm:py-3 bg-green-500/20 border-2 border-green-500 rounded-none hover:bg-red-500/20 hover:border-red-500 transition-all duration-300 terminal-button text-sm sm:text-base">[View_Projects]</a>
+                            <a href="#contact" class="px-4 sm:px-8 py-2 sm:py-3 bg-red-500/20 border-2 border-red-500 rounded-none hover:bg-green-500/20 hover:border-green-500 transition-all duration-300 terminal-button text-sm sm:text-base">[Initialize_Contact]</a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2" data-aos="fade-left">
+                        <div class="relative cyberpunk-container">
+                            <div class="absolute inset-0 bg-gradient-to-r from-green-500/30 to-red-500/30 blur-3xl animate-pulse"></div>
+                            <img src="./boot-kali.gif" alt="Hacker Animation" class="w-full max-w-sm lg:max-w-lg mx-auto glitch-image border-2 border-green-500/50 shadow-2xl shadow-green-500/30 transform hover:scale-105 transition-all duration-500">
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3><a href="https://github.com/KunalPsycho100/Distracted-Driver" target="_blank">Distracted Driver Detection System</a></h3>
-                    <p>Implemented a real-time system to detect driver distractions using machine learning and computer vision techniques.</p>
-                </div>
-                <div class="project">
-                    <h3><a href="https://github.com/KunalPsycho100/SSH-Honeypot" target="_blank">SSH Honeypot</a></h3>
-                    <p>Designed a Python-based SSH honeypot to monitor and analyze unauthorized login attempts.</p>
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
+                    <a href="#about" class="text-green-400 hover:text-red-400" aria-label="Scroll to About section">
+                        <i class="fas fa-chevron-down text-3xl"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section id="about" class="py-20" data-aos="fade-up">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center glitch-text">[System_Profile]</h2>
+                <div class="bg-black/80 p-4 sm:p-8 border-2 border-green-500/50 terminal-window">
+                    <div class="terminal-header mb-4">
+                        <span class="text-green-500">root@kali</span>:<span class="text-blue-400">~/about</span>$ cat profile.txt
+                    </div>
+                    <p class="text-base sm:text-lg text-green-400 leading-relaxed typing-animation">
+                        {
+                            "identity": "Kunal Joshi",
+                            "status": "Elite Security Researcher",
+                            "education": "B.Tech @ NSUT",
+                            "specialization": [
+                                "Advanced Penetration Testing",
+                                "Malware Analysis",
+                                "Network Security",
+                                "Web Application Security",
+                                "Machine Learning in Cybersecurity"
+                            ]
+                        }
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:kunaljoshikj22@gmail.com">kunaljoshikj22@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kunal-joshi-83ab4719a/" target="_blank">linkedin.com/in/kunal-joshi-83ab4719a</a></p>
-            <p>GitHub: <a href="https://github.com/KunalPsycho100/" target="_blank">github.com/KunalPsycho100</a></p>
-        </div>
-    </section>
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 relative" data-aos="fade-up">
+            <div class="absolute inset-0 bg-matrix-pattern opacity-5"></div>
+            <div class="container mx-auto px-4 max-w-6xl relative">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center glitch-text">[System_Experience]</h2>
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- ZEVO Experience -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-red-400">> Data Analyst</h3>
+                            <span class="text-green-400 text-sm">January 2025 - Present</span>
+                        </div>
+                        <h4 class="text-green-400 mb-4">ZEVO (Reinvent Agrochain)</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Data Analysis & Visualisation – Built dashboards in Excel and Power BI to simplify key metrics for business and non-technical teams.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Sustainability & Performance Analytics – Designed a Tableau dashboard visualizing fleet usage, charging stats, and emissions for sustainability planning.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Fraud Detection Analytics – Identified suspicious activities using data modeling and trend analysis.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Data Cleaning & Analysis – Cleaned and structured datasets to provide actionable insights for strategic and operational business decisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Market Research & Collaborated Development – Conducted market research on LNG trucks, analyzing emissions, payload benefits, and new OEM partnership
+                                    opportunities.</span>
+                            </li>
+                        </ul>
+                    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Kunal Joshi. All rights reserved.</p>
+                    <!-- CDAC Experience -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-red-400">> Cybersecurity Intern</h3>
+                            <span class="text-green-400 text-sm">August 2024 - October 2024</span>
+                        </div>
+                        <h4 class="text-green-400 mb-4">CDAC Noida</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Web Security – Completed 50+ labs on web security, SSL/TLS, and authentication.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Penetration Testing – Simulated 20+ attacks using Burp Suite, Nmap, Metasploit.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Clickjacking Defense – Audited 30+ sites, enforcing CSP & X-Frame-Options, boosting compliance by 40%.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Cybersecurity Research – Collaborated with 10+ experts on threat modeling, secure coding, incident response.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Compliance & Reporting – Documented vulnerabilities per OWASP Top 10 & NIST standards.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- MCD Experience -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-red-400">> SWE Intern</h3>
+                            <span class="text-green-400 text-sm">June 2024 - August 2024</span>
+                        </div>
+                        <h4 class="text-green-400 mb-4">Municipal Corporation of Delhi, IT Dept.</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Web Development – Improved 10+ pages on the G8 Challan Portal, fixing 30+ issues using PHP, JavaScript, PostgreSQL.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Portal Optimization – Designed a Registration Portal, boosting scheduling efficiency by 60% for 500+ attendees.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">API & Performance – Integrated REST APIs, cutting database response time by 35%.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Security & Debugging – Fixed critical bugs, enhancing security compliance in PHP & JavaScript.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Tech Stack – Worked with PHP, JavaScript, PostgreSQL, REST APIs, Flutter, Linux for full-stack development.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 relative" data-aos="fade-up">
+            <div class="absolute inset-0 bg-matrix-pattern opacity-5"></div>
+            <div class="container mx-auto px-4 max-w-4xl relative">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center glitch-text">[Skill_Matrix]</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Technical Skills -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50">
+                        <h3 class="text-2xl font-bold mb-6 text-red-400">> Technical_Skills</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><span class="text-green-500">$</span> Python, Java, Bash</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> PHP, SQL, HTML/CSS/JS</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> AWS, GCP</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Machine Learning</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Data Structures & Algorithms</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cybersecurity Skills -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50">
+                        <h3 class="text-2xl font-bold mb-6 text-red-400">> Cyber_Security</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><span class="text-green-500">$</span> SIEM & Firewalls</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Vulnerability Assessment</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Network & Cloud Security</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> OWASP, GDPR, ISO 27001</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Penetration Testing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Security Tools -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50">
+                        <h3 class="text-2xl font-bold mb-6 text-red-400">> Security_Tools</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><span class="text-green-500">$</span> Kali Linux, Metasploit</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Nmap, Hydra, Splunk</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Wireshark, Burp Suite</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> SQLmap, Skipfish</li>
+                            <li class="flex items-center"><span class="text-green-500">$</span> Hashcat, JohnTheRipper</li>
+                        </ul>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 md:col-span-2 lg:col-span-3">
+                        <h3 class="text-2xl font-bold mb-6 text-red-400">> Achievements</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-green-400 mb-4 font-bold">Certifications & Learning</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">Gold – Programming in Java (NPTEL)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">Internet of Things Certification</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">CEH Exam Prep (Udemy)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">Machine Learning (DeepLearning.AI Stanford)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-green-400 mb-4 font-bold">Competitions & Platforms</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">400+ DSA problems solved on LeetCode and GeeksForGeeks</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">Semifinalist at AdobeXGeeksforGeeks (Top 5 percentile)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">Active participation in Bug Bounties & CTF Challenges</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">$</span>
+                                        <span class="text-green-400">TryHackMe labs participant</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20" data-aos="fade-up">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center glitch-text">[Security_Projects]</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Network Scanning Project -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500 group">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4">
+                                <a href="#" target="_blank" class="text-red-400 hover:text-green-400 flex items-center">
+                                    <i class="fas fa-network-wired mr-3 group-hover:rotate-12 transition-transform"></i>Network Scanner
+                                </a>
+                            </h3>
+                            <div class="text-xs text-green-400 mb-4 font-mono">Tech Stack: Python, Scapy, TCP/IP, ARP</div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Built a Python-based network scanner using Scapy, detecting 100+ active hosts and 500+ open ports via ARP-based device discovery and TCP SYN scanning.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Optimized TCP handshake analysis, reducing false positives by 25%, and ensured UNIX compatibility with low-level packet manipulation.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Integrated automated logging and reporting, exporting 1,000+ scan results in JSON and CSV formats.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- SSH Honeypot Project -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500 group">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4">
+                                <a href="https://github.com/KunalPsycho100/SSH-Honeypot" target="_blank" rel="noopener" class="text-red-400 hover:text-green-400 flex items-center">
+                                    <i class="fas fa-bug mr-3 group-hover:rotate-12 transition-transform"></i>SSH Honeypot
+                                </a>
+                            </h3>
+                            <div class="text-xs text-green-400 mb-4 font-mono">Tech Stack: Python, Paramiko, Threading</div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Developed a high-interaction SSH honeypot using Paramiko, logging 1,000+ unauthorized login attempts.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Simplified with multithreading, handling 50+ concurrent attackers, boosting system efficiency by 60%.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Captured and analyzed 10,000+ malicious requests, identifying 200+ unique attack patterns.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Clickjacking Security Project -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500 group">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4">
+                                <a href="#" class="text-red-400 hover:text-green-400 flex items-center">
+                                    <i class="fas fa-shield-alt mr-3 group-hover:rotate-12 transition-transform"></i>Clickjacking Security
+                                </a>
+                            </h3>
+                            <div class="text-xs text-green-400 mb-4 font-mono">Tech Stack: Burp Suite, OWASP ZAP, CSP</div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Analyzed clickjacking vulnerabilities across 50+ websites, identifying 30+ exploitable cases.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Implemented CSP and X-Frame-Options, enhancing security compliance by 60%.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Reduced attack surfaces by 40% through penetration testing and security hardening.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Secure Chess Engine -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500 group">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4">
+                                <a href="https://github.com/KunalPsycho100/Two-Players-Chess" target="_blank" rel="noopener" class="text-red-400 hover:text-green-400 flex items-center">
+                                    <i class="fas fa-chess mr-3 group-hover:rotate-12 transition-transform"></i>Secure Chess Engine
+                                </a>
+                            </h3>
+                            <div class="text-xs text-green-400 mb-4 font-mono">Tech Stack: Python, Cryptography, Networking</div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Implemented secure multiplayer chess with end-to-end encryption and move validation.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Developed anti-cheat mechanisms and secure networking protocols for fair gameplay.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Integrated real-time game state synchronization with cryptographic verification.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- AI Security System -->
+                    <div class="terminal-window bg-black/80 p-8 border-2 border-green-500/50 hover:border-red-500/50 transition-all duration-500 group">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4">
+                                <a href="https://github.com/KunalPsycho100/Distracted-Driver" target="_blank" rel="noopener" class="text-red-400 hover:text-green-400 flex items-center">
+                                    <i class="fas fa-robot mr-3 group-hover:rotate-12 transition-transform"></i>AI Security System
+                                </a>
+                            </h3>
+                            <div class="text-xs text-green-400 mb-4 font-mono">Tech Stack: Python, TensorFlow, OpenCV</div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Developed ML-powered security system for real-time threat detection and analysis.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Implemented behavioral analysis algorithms with 95% accuracy in threat detection.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">$</span>
+                                <span class="text-green-400">Integrated real-time monitoring and alert system for security incidents.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 relative" data-aos="fade-up">
+            <div class="absolute inset-0 bg-matrix-pattern opacity-5"></div>
+            <div class="container mx-auto px-2 md:px-4 max-w-4xl relative">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center glitch-text">[Establish_Connection]</h2>
+                <div class="terminal-window bg-black/80 p-10 border-2 border-green-500/50">
+                    <div class="flex flex-col items-center space-y-8 text-lg">
+                        <a href="mailto:kunaljoshikj22@gmail.com" class="group flex items-center space-x-4 text-green-400 hover:text-red-400 transition-all duration-300">
+                            <i class="fas fa-terminal text-3xl"></i>
+                            <span>kunaljoshikj22@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kunal-joshi-83ab4719a/" target="_blank" rel="noopener" class="group flex items-center space-x-4 text-green-400 hover:text-red-400 transition-all duration-300">
+                            <i class="fab fa-linkedin text-3xl"></i>
+                            <span>linkedin.com/in/kunal-joshi-83ab4719a</span>
+                        </a>
+                        <a href="https://github.com/KunalPsycho100/" target="_blank" rel="noopener" class="group flex items-center space-x-4 text-green-400 hover:text-red-400 transition-all duration-300">
+                            <i class="fab fa-github text-3xl"></i>
+                            <span>github.com/KunalPsycho100</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-black/80 border-t border-green-500/30 relative z-10">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-green-400 text-sm sm:text-base">[System: Connection_Terminated] © 2025 Kunal Joshi. All rights reserved.</p>
+            <p class="text-center text-green-400 text-xs sm:text-sm mt-2">Background Image by <a href="https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5361690" target="_blank" rel="noopener" class="hover:text-red-400">Gordon Johnson</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5361690" target="_blank" rel="noopener" class="hover:text-red-400">Pixabay</a></p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Hamburger menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+    </script>
 </body>
 </html>
+    <!-- React and ReactDOM CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    
+    <!-- React Spring for animations -->
+    <script src="https://unpkg.com/@react-spring/web@9.5.5/dist/web.umd.min.js"></script>
+
+    <script>
+        // React Spring animations
+        const { useSpring, animated } = ReactSpring;
+
+        // Animate sections on scroll
+        document.querySelectorAll('section').forEach(section => {
+            const springProps = useSpring({
+                from: { opacity: 0, transform: 'translateY(50px)' },
+                to: { opacity: 1, transform: 'translateY(0)' },
+                config: { tension: 280, friction: 60 },
+                delay: 200,
+            });
+
+            ReactDOM.render(
+                React.createElement(animated.div, {
+                    style: springProps,
+                    children: section.innerHTML
+                }),
+                section
+            );
+        });
+
+        // Animate terminal windows
+        document.querySelectorAll('.terminal-window').forEach(terminal => {
+            const springProps = useSpring({
+                from: { scale: 0.9, opacity: 0 },
+                to: { scale: 1, opacity: 1 },
+                config: { tension: 300, friction: 10 },
+                delay: 100,
+            });
+
+            ReactDOM.render(
+                React.createElement(animated.div, {
+                    style: springProps,
+                    className: terminal.className,
+                    children: terminal.innerHTML
+                }),
+                terminal
+            );
+        });
+
+        // Animate navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            const springProps = useSpring({
+                from: { transform: 'translateX(-20px)', opacity: 0 },
+                to: { transform: 'translateX(0)', opacity: 1 },
+                config: { tension: 300, friction: 10 },
+            });
+
+            ReactDOM.render(
+                React.createElement(animated.a, {
+                    style: springProps,
+                    href: link.href,
+                    className: link.className,
+                    children: link.innerHTML
+                }),
+                link
+            );
+        });
+    </script>
